@@ -659,7 +659,7 @@ impl<'a> CsvTable<'a> {
                 _ => "-".to_owned(),
             };
             content += format!(
-                " [Row {}/{}, Col {}/{}]",
+                " [row {}/{}, col {}/{}]",
                 row_num,
                 total_str,
                 state.cols_offset + 1,

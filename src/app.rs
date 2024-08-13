@@ -485,19 +485,19 @@ impl App {
                     match self.clipboard.as_mut().map(|c| c.set_text(&selected)) {
                         Ok(_) => self
                             .transient_message
-                            .replace(format!("Copied {} to clipboard", selected.as_str())),
+                            .replace(format!("copied {} to clipboard", selected.as_str())),
                         Err(e) => self
                             .transient_message
-                            .replace(format!("Failed to copy to clipboard: {e}")),
+                            .replace(format!("failed to copy to clipboard: {e}")),
                     };
                 } else if let Some((index, row)) = self.rows_view.get_row_value() {
                     match self.clipboard.as_mut().map(|c| c.set_text(&row)) {
                         Ok(_) => self
                             .transient_message
-                            .replace(format!("Copied row {} to clipboard", index)),
+                            .replace(format!("copied row {} to clipboard", index)),
                         Err(e) => self
                             .transient_message
-                            .replace(format!("Failed to copy to clipboard: {e}")),
+                            .replace(format!("failed to copy to clipboard: {e}")),
                     };
                 }
             }
